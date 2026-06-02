@@ -248,12 +248,11 @@ const trustCards = [
 ];
 
 const staticServices = [
-  { icon: Plane, title: "Airport Transfer", desc: "Hassle-free airport pickups and drops" },
-  { icon: Building2, title: "Corporate Travel", desc: "Dedicated solutions for businesses" },
-  { icon: Clock4, title: "Local Rental", desc: "Hourly packages for city travel" },
-  { icon: Map, title: "Outstation Trip", desc: "Comfortable long-distance journeys" },
-  { icon: PartyPopper, title: "Wedding/Event", desc: "Special occasions deserve special rides" },
-  { icon: Bus, title: "Employee Transport", desc: "Daily office commute solutions" },
+  { icon: Car, title: "Car Rental", desc: "Premium chauffeur-driven cars for city or outstation travel" },
+  { icon: Plane, title: "Airport Cab", desc: "Hassle-free airport pickups and drops near Mumbai Airport" },
+  { icon: MapPin, title: "One-Way Ride", desc: "Pay only for one-way distance to your destination" },
+  { icon: Map, title: "Round Trip", desc: "Comfortable long-distance multi-day journeys" },
+  { icon: Bus, title: "Employee Transport", desc: "Daily office commute solutions for corporate teams" },
 ];
 
 export default function HomePage() {

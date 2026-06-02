@@ -20,7 +20,8 @@ export default function AdminFleet() {
   const [formData, setFormData] = useState({
     name: "", image: "", passengers: 4, luggage: 2, description: "",
     base_price: 0, price_per_km: 0, rental_4hr: 0, rental_8hr: 0,
-    extra_hour: 0, extra_km: 0, outstation_per_km: 0, night_allowance: 300, driver_allowance: 500
+    extra_hour: 0, extra_km: 0, outstation_per_km: 0, night_allowance: 300, driver_allowance: 500,
+    subtitle: "", outstation_min_km: 300
   });
 
   const [imageMode, setImageMode] = useState("upload"); // "upload" | "url"
@@ -143,7 +144,8 @@ export default function AdminFleet() {
       description: car.description, base_price: car.base_price, price_per_km: car.price_per_km,
       rental_4hr: car.rental_4hr, rental_8hr: car.rental_8hr, extra_hour: car.extra_hour,
       extra_km: car.extra_km, outstation_per_km: car.outstation_per_km,
-      night_allowance: car.night_allowance, driver_allowance: car.driver_allowance
+      night_allowance: car.night_allowance, driver_allowance: car.driver_allowance,
+      subtitle: car.subtitle || "", outstation_min_km: car.outstation_min_km || 300
     });
     
     const isUpload = car.image && !car.image.startsWith("http");
@@ -161,7 +163,8 @@ export default function AdminFleet() {
     setFormData({
       name: "", image: "", passengers: 4, luggage: 2, description: "",
       base_price: 0, price_per_km: 0, rental_4hr: 0, rental_8hr: 0,
-      extra_hour: 0, extra_km: 0, outstation_per_km: 0, night_allowance: 300, driver_allowance: 500
+      extra_hour: 0, extra_km: 0, outstation_per_km: 0, night_allowance: 300, driver_allowance: 500,
+      subtitle: "", outstation_min_km: 300
     });
     setUploadFile(null);
     setUploadPreview("");
@@ -194,9 +197,15 @@ export default function AdminFleet() {
                 </DialogHeader>
                 <div className="space-y-4">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div>
-                      <Label className="text-muted-foreground">Name *</Label>
-                      <Input value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} className="bg-background border-border text-foreground mt-1" />
+                    <div className="space-y-4">
+                      <div>
+                        <Label className="text-muted-foreground">Name *</Label>
+                        <Input value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} className="bg-background border-border text-foreground mt-1" />
+                      </div>
+                      <div>
+                        <Label className="text-muted-foreground">Subtitle (e.g. 220, Luxury)</Label>
+                        <Input value={formData.subtitle || ""} onChange={(e) => setFormData({ ...formData, subtitle: e.target.value })} className="bg-background border-border text-foreground mt-1" />
+                      </div>
                     </div>
                     <div className="flex flex-col gap-2">
                       <Label className="text-muted-foreground">Vehicle Image *</Label>
@@ -308,14 +317,38 @@ export default function AdminFleet() {
                       <Input type="number" value={formData.outstation_per_km} onChange={(e) => setFormData({ ...formData, outstation_per_km: parseFloat(e.target.value) })} className="bg-background border-border text-foreground mt-1" />
                     </div>
                   </div>
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="grid grid-cols-3 gap-4">
                     <div>
                       <Label className="text-muted-foreground">4hr Rental</Label>
-                      <Input type="number" value={formData.rental_4hr} onChange={(e) => setFormData({ ...formData, rental_4hr: parseFloat(e.target.value) })} className="bg-background border-border text-foreground mt-1" />
+                      <Input type="number" value={formData.rental_4hr} onChange={(e) => setFormData({ ...formData, rental_4hr: parseFloat(e.target.value) || 0 })} className="bg-background border-border text-foreground mt-1" />
                     </div>
                     <div>
                       <Label className="text-muted-foreground">8hr Rental</Label>
-                      <Input type="number" value={formData.rental_8hr} onChange={(e) => setFormData({ ...formData, rental_8hr: parseFloat(e.target.value) })} className="bg-background border-border text-foreground mt-1" />
+                      <Input type="number" value={formData.rental_8hr} onChange={(e) => setFormData({ ...formData, rental_8hr: parseFloat(e.target.value) || 0 })} className="bg-background border-border text-foreground mt-1" />
+                    </div>
+                    <div>
+                      <Label className="text-muted-foreground">Outstation Min KM</Label>
+                      <Input type="number" value={formData.outstation_min_km} onChange={(e) => setFormData({ ...formData, outstation_min_km: parseInt(e.target.value) || 0 })} className="bg-background border-border text-foreground mt-1" />
+                    </div>
+                  </div>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div>
+                      <Label className="text-muted-foreground">Extra Hour Rate</Label>
+                      <Input type="number" value={formData.extra_hour} onChange={(e) => setFormData({ ...formData, extra_hour: parseFloat(e.target.value) })} className="bg-background border-border text-foreground mt-1" />
+                    </div>
+                    <div>
+                      <Label className="text-muted-foreground">Extra KM Rate</Label>
+                      <Input type="number" value={formData.extra_km} onChange={(e) => setFormData({ ...formData, extra_km: parseFloat(e.target.value) })} className="bg-background border-border text-foreground mt-1" />
+                    </div>
+                  </div>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div>
+                      <Label className="text-muted-foreground">Driver Allowance</Label>
+                      <Input type="number" value={formData.driver_allowance} onChange={(e) => setFormData({ ...formData, driver_allowance: parseFloat(e.target.value) })} className="bg-background border-border text-foreground mt-1" />
+                    </div>
+                    <div>
+                      <Label className="text-muted-foreground">Night Allowance</Label>
+                      <Input type="number" value={formData.night_allowance} onChange={(e) => setFormData({ ...formData, night_allowance: parseFloat(e.target.value) })} className="bg-background border-border text-foreground mt-1" />
                     </div>
                   </div>
                    <Button onClick={handleSubmit} disabled={uploading} className="w-full bg-[#FFD700] text-black hover:bg-[#E5C100]">
@@ -350,7 +383,9 @@ export default function AdminFleet() {
                     <img src={resolveImageUrl(car.image)} alt={car.name} className="w-full h-full object-cover" />
                   </div>
                   <div className="p-4">
-                    <h3 className="text-foreground font-semibold mb-2">{car.name}</h3>
+                    <h3 className="text-foreground font-semibold mb-2">
+                      {car.name} {car.subtitle && <span className="text-[#FFD700] text-sm font-normal ml-1">({car.subtitle})</span>}
+                    </h3>
                     <div className="flex items-center gap-4 text-muted-foreground text-sm mb-3">
                       <span className="flex items-center gap-1"><Users size={14} /> {car.passengers}</span>
                       <span className="flex items-center gap-1"><Briefcase size={14} /> {car.luggage}</span>

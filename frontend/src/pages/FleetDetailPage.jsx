@@ -256,7 +256,7 @@ export default function FleetDetailPage() {
                       <span className="text-white">₹{car.outstation_per_km}/km</span>
                     </div>
                     <div className="flex justify-between text-sm">
-                      <span className="text-zinc-500">Min. 300 km/day</span>
+                      <span className="text-zinc-500">Min. {car.outstation_min_km || 300} km/day</span>
                       <span className="text-zinc-400">Applied</span>
                     </div>
                     <div className="flex justify-between text-sm">
