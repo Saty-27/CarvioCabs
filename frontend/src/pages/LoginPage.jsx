@@ -157,13 +157,7 @@ export default function LoginPage() {
             </Link>
           </p>
 
-          {/* Demo credentials notice */}
-          <div className="mt-8 p-4 bg-secondary/50 rounded-lg border border-border">
-            <p className="text-muted-foreground text-sm text-center">
-              <span className="text-[#FFD700] font-semibold">Admin Demo:</span><br />
-              admin@carviocabs.com / admin123
-            </p>
-          </div>
+
         </motion.div>
       </div>
 

@@ -46,6 +46,16 @@ import { API } from "./apiConfig";
 import { resolveImageUrl } from "@/utils/imageUrl";
 import FloatingContactButtons from "@/components/FloatingContactButtons";
 
+// Scroll to top helper component
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
 
 // Protected Route
 const ProtectedRoute = ({ children, adminOnly = false }) => {
@@ -256,6 +266,7 @@ function App() {
   return (
     <ThemeProvider>
       <BrowserRouter>
+        <ScrollToTop />
         <AuthProvider>
           <Toaster position="top-right" richColors />
           <AppRouter />

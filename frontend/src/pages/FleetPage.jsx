@@ -49,7 +49,7 @@ export default function FleetPage() {
         <div className="max-w-7xl mx-auto px-6 md:px-12 text-center relative z-10">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
             <span className="text-[#FFD700] text-sm font-medium tracking-widest uppercase">Our Fleet</span>
-            <h1 className="text-4xl md:text-6xl font-bold text-foreground mt-4 mb-6">Choose Your <span className="text-[#FFD700]">Luxury</span></h1>
+            <h1 className="text-4xl md:text-6xl font-bold text-foreground mt-4 mb-6">Choose Your <span className="text-[#FFD700]">Car</span></h1>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">From executive sedans to spacious SUVs, find the perfect vehicle for your journey.</p>
           </motion.div>
         </div>
