@@ -145,7 +145,7 @@ class CarvioAPITester:
         # Test admin login
         admin_data = {
             "email": "admin@carviocabs.com",
-            "password": "admin123"
+            "password": "SunilSingh344,,,000"
         }
         
         success, admin_response = self.run_test(
@@ -269,7 +269,9 @@ def main():
     print("🚗 Starting Carvio Cabs API Testing...")
     print(f"⏰ Test started at: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     
-    tester = CarvioAPITester()
+    import os
+    base_url = os.environ.get("API_URL", "http://localhost:8000")
+    tester = CarvioAPITester(base_url=base_url)
     
     # Run all tests
     tester.test_health_check()

@@ -1,4 +1,4 @@
-#!/Users/satyangupta/Downloads/Carvio-main/backend/venv/bin/python3.12
+#!/Users/satyangupta/Desktop/carvio/backend/venv/bin/python3.12
 # -*- coding: utf-8 -*-
 import re
 import sys

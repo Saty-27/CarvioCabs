@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Navbar, Footer } from "@/pages/HomePage";
 import { motion } from "framer-motion";
-import { Navigation, Car, BookOpen, FileText, Info, HelpCircle, MapPin } from "lucide-react";
+import { Navigation, Car, BookOpen, FileText, Info, HelpCircle, MapPin, ShieldCheck } from "lucide-react";
 import axios from "axios";
 import { API } from "@/apiConfig";
 import { useSEO } from "@/hooks/useSEO";
@@ -60,6 +60,17 @@ export default function SitemapPage() {
     { title: "Sitemap", path: "/sitemap" }
   ];
 
+  const servicePages = [
+    { title: "Car Rental in Mumbai", path: "/car-rental-mumbai" },
+    { title: "Mumbai Airport Cab Service", path: "/airport-cab-mumbai" },
+    { title: "Outstation Cab Service", path: "/outstation-cab-mumbai" },
+    { title: "Local Cab Service", path: "/local-cab-mumbai" },
+    { title: "Corporate Cab Service", path: "/corporate-cab-service" },
+    { title: "Mumbai to Pune Cab", path: "/mumbai-to-pune-cab" },
+    { title: "Mumbai to Nashik Cab", path: "/mumbai-to-nashik-cab" },
+    { title: "Mumbai to Shirdi Cab", path: "/mumbai-to-shirdi-cab" }
+  ];
+
   const locationPages = [
     { title: "Taxi Service in Andheri", path: "/taxi-service-in-andheri" },
     { title: "Cab Service in Bandra", path: "/cab-service-in-bandra" },
@@ -71,7 +82,25 @@ export default function SitemapPage() {
     { title: "Car Rental in Goregaon", path: "/car-rental-in-goregaon" },
     { title: "Taxi Service in Churchgate", path: "/taxi-service-in-churchgate" },
     { title: "Cab Service in Matunga", path: "/cab-service-in-matunga" },
-    { title: "Mumbai Airport Taxi Service", path: "/airport-taxi-service-mumbai" }
+    { title: "Mumbai Airport Taxi Service", path: "/airport-taxi-service-mumbai" },
+    { title: "Cab Service in Juhu", path: "/cab-service-in-juhu" },
+    { title: "Cab Service in Malad", path: "/cab-service-in-malad" },
+    { title: "Cab Service in Borivali", path: "/cab-service-in-borivali" },
+    { title: "Cab Service in Kandivali", path: "/cab-service-in-kandivali" },
+    { title: "Cab Service in Powai", path: "/cab-service-in-powai" },
+    { title: "Cab Service in BKC", path: "/cab-service-in-bkc" },
+    { title: "Cab Service in Lower Parel", path: "/cab-service-in-lower-parel" },
+    { title: "Cab Service in Worli", path: "/cab-service-in-worli" },
+    { title: "Cab Service in Colaba", path: "/cab-service-in-colaba" },
+    { title: "Cab Service in Chembur", path: "/cab-service-in-chembur" },
+    { title: "Cab Service in Ghatkopar", path: "/cab-service-in-ghatkopar" },
+    { title: "Cab Service in Thane", path: "/cab-service-in-thane" },
+    { title: "Cab Service in Navi Mumbai", path: "/cab-service-in-navi-mumbai" },
+    { title: "Cab Service in Vashi", path: "/cab-service-in-vashi" },
+    { title: "Cab Service in Nerul", path: "/cab-service-in-nerul" },
+    { title: "Cab Service in Kharghar", path: "/cab-service-in-kharghar" },
+    { title: "Cab Service in Airoli", path: "/cab-service-in-airoli" },
+    { title: "Cab Service in Mira Road", path: "/cab-service-in-mira-road" }
   ];
 
   return (
@@ -106,6 +135,24 @@ export default function SitemapPage() {
                 </div>
                 <ul className="space-y-3 flex-grow">
                   {mainPages.map((page, index) => (
+                    <li key={index}>
+                      <Link to={page.path} className="text-muted-foreground hover:text-white transition-colors flex items-center gap-2 group text-sm md:text-base">
+                        <span className="h-1.5 w-1.5 rounded-full bg-zinc-600 group-hover:bg-white transition-colors" />
+                        {page.title}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+
+              {/* Core Services & Routes */}
+              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.02 }} className="card-dark p-6 md:p-8 flex flex-col">
+                <div className="flex items-center gap-3 mb-6 pb-4 border-b border-zinc-800">
+                  <ShieldCheck className="text-white" size={22} />
+                  <h2 className="text-foreground font-bold text-xl">Services & Routes</h2>
+                </div>
+                <ul className="space-y-3 flex-grow">
+                  {servicePages.map((page, index) => (
                     <li key={index}>
                       <Link to={page.path} className="text-muted-foreground hover:text-white transition-colors flex items-center gap-2 group text-sm md:text-base">
                         <span className="h-1.5 w-1.5 rounded-full bg-zinc-600 group-hover:bg-white transition-colors" />

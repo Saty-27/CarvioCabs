@@ -382,7 +382,7 @@ async def require_admin(request: Request) -> User:
 # ============== AUTH ROUTES ==============
 
 @api_router.post("/auth/register")
-async def register(data: UserCreate):
+async def register(data: UserCreate, response: Response):
     existing = await db.users.find_one({"email": data.email}, {"_id": 0})
     if existing:
         raise HTTPException(status_code=400, detail="Email already registered")
@@ -400,6 +400,7 @@ async def register(data: UserCreate):
     }
     await db.users.insert_one(user_doc)
     token = create_jwt_token(user_id, data.email, "user")
+    response.set_cookie(key="session_token", value=token, httponly=True, secure=True, samesite="none", path="/", max_age=JWT_EXPIRATION_HOURS * 3600)
     return {"token": token, "user": {"user_id": user_id, "email": data.email, "name": data.name, "phone": data.phone, "role": "user"}}
 
 @api_router.post("/auth/login")
@@ -1438,7 +1439,33 @@ async def sitemap(request: Request):
         "/car-rental-in-goregaon",
         "/taxi-service-in-churchgate",
         "/cab-service-in-matunga",
-        "/airport-taxi-service-mumbai"
+        "/airport-taxi-service-mumbai",
+        "/cab-service-in-juhu",
+        "/cab-service-in-malad",
+        "/cab-service-in-borivali",
+        "/cab-service-in-kandivali",
+        "/cab-service-in-powai",
+        "/cab-service-in-bkc",
+        "/cab-service-in-lower-parel",
+        "/cab-service-in-worli",
+        "/cab-service-in-colaba",
+        "/cab-service-in-chembur",
+        "/cab-service-in-ghatkopar",
+        "/cab-service-in-thane",
+        "/cab-service-in-navi-mumbai",
+        "/cab-service-in-vashi",
+        "/cab-service-in-nerul",
+        "/cab-service-in-kharghar",
+        "/cab-service-in-airoli",
+        "/cab-service-in-mira-road",
+        "/car-rental-mumbai",
+        "/airport-cab-mumbai",
+        "/outstation-cab-mumbai",
+        "/local-cab-mumbai",
+        "/corporate-cab-service",
+        "/mumbai-to-pune-cab",
+        "/mumbai-to-nashik-cab",
+        "/mumbai-to-shirdi-cab"
     ]
     
     urls = []

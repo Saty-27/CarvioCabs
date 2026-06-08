@@ -337,9 +337,9 @@ export default function HomePage() {
   };
 
   useSEO({
-    title: "Carvio Cabs | Premium Cab Service, Airport Taxi & Car Rental in Mumbai",
-    description: "Book premium cab service in Mumbai with Carvio Cabs. We offer airport pickup and drop, chauffeur-driven car rental, corporate travel, local rental, outstation cab service and event transportation across Mumbai.",
-    keywords: "cab service in Mumbai, taxi service in Mumbai, car rental in Mumbai, car rental with driver in Mumbai, chauffeur driven car rental Mumbai, premium cab service Mumbai, airport taxi Mumbai, Mumbai airport pickup and drop",
+    title: "Cab Service in Mumbai | Car Rental & Taxi Service | Carvio Cab",
+    description: "Book reliable cab service in Mumbai with Carvio Cab. Get local taxi service, airport cab, outstation cab, and car rental with driver at affordable prices.",
+    keywords: "cab service in Mumbai, taxi service in Mumbai, car rental in Mumbai, car rental service in Mumbai, Carvio Cab, Carvio Cabs, Carvio Cab’s, Carvio, Carvio Cab Mumbai, cab booking in Mumbai, airport cab Mumbai, outstation cab from Mumbai, local cab service Mumbai, private car rental Mumbai, chauffeur driven car rental Mumbai",
     schema: {
       "@context": "https://schema.org",
       "@graph": [taxiSchema, faqSchema]
@@ -356,6 +356,7 @@ export default function HomePage() {
   const [leadEmail, setLeadEmail] = useState("");
   const [leadPhone, setLeadPhone] = useState("");
   const [leadMessage, setLeadMessage] = useState("");
+  const [isCalendarOpen, setIsCalendarOpen] = useState(false);
 
   useEffect(() => {
     if (user) {
@@ -480,9 +481,11 @@ Message: ${leadMessage || "None"}
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
               <div className="gold-line mb-6" />
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-                {heroHeading}
+                Cab Service in Mumbai by Carvio Cab
               </h1>
-              <p className="text-zinc-300 text-lg md:text-xl max-w-lg mb-8">{heroSubheading}</p>
+              <p className="text-zinc-300 text-lg md:text-xl max-w-lg mb-8">
+                Carvio Cab offers reliable cab service, taxi service, and car rental service in Mumbai for local travel, airport pickup and drop, outstation rides, corporate travel, and private car rental with driver. Whether you need a cab near you, airport cab in Mumbai, or outstation taxi from Mumbai, Carvio Cab provides comfortable, safe, and professional travel solutions.
+              </p>
               <div className="flex flex-wrap gap-4">
                 <Link to="/book">
                   <Button className="bg-[#FFD700] text-black hover:bg-[#E5C100] font-medium px-8 py-6 text-lg" data-testid="hero-book-btn">
@@ -527,7 +530,7 @@ Message: ${leadMessage || "None"}
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <label className="text-zinc-300 text-sm mb-2 block">Pickup Date</label>
-                    <Popover>
+                    <Popover open={isCalendarOpen} onOpenChange={setIsCalendarOpen}>
                       <PopoverTrigger asChild>
                         <Button variant="outline" className="w-full justify-start bg-black/40 border-white/10 hover:bg-black/60 text-left h-12 overflow-hidden" data-testid="date-picker-btn">
                           <CalendarIcon className="mr-2 text-[#FFD700] flex-shrink-0" size={18} />
@@ -535,7 +538,7 @@ Message: ${leadMessage || "None"}
                         </Button>
                       </PopoverTrigger>
                       <PopoverContent className="w-auto p-0 bg-secondary border-border" align="start">
-                        <Calendar mode="single" selected={pickupDate} onSelect={setPickupDate} disabled={(date) => date < new Date()} className="bg-secondary text-foreground" />
+                        <Calendar mode="single" selected={pickupDate} onSelect={(date) => { setPickupDate(date); setIsCalendarOpen(false); }} disabled={(date) => date < new Date()} className="bg-secondary text-foreground" />
                       </PopoverContent>
                     </Popover>
                   </div>
@@ -616,7 +619,7 @@ Message: ${leadMessage || "None"}
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
             <span className="text-zinc-400 text-sm font-medium tracking-widest uppercase">Why Choose Us</span>
-            <h2 className="text-3xl md:text-5xl font-bold text-foreground mt-4">Trusted by Thousands</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-foreground mt-4">Why Choose Carvio Cab?</h2>
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {trustCards.map((card, i) => (
@@ -684,7 +687,7 @@ Message: ${leadMessage || "None"}
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="flex flex-col md:flex-row md:items-end md:justify-between mb-12">
             <div>
               <span className="text-zinc-400 text-sm font-medium tracking-widest uppercase">Our Fleet</span>
-              <h2 className="text-3xl md:text-5xl font-bold text-foreground mt-4">Premium Vehicles</h2>
+              <h2 className="text-3xl md:text-5xl font-bold text-foreground mt-4">Reliable Cab Service in Mumbai</h2>
             </div>
             <Link to="/fleet">
               <Button variant="outline" className="border-border text-foreground hover:bg-secondary mt-4 md:mt-0" data-testid="view-all-fleet-btn">
@@ -728,7 +731,7 @@ Message: ${leadMessage || "None"}
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
             <span className="text-zinc-400 text-sm font-medium tracking-widest uppercase">Services</span>
-            <h2 className="text-3xl md:text-5xl font-bold text-foreground mt-4">What We Offer</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-foreground mt-4">Car Rental Service with Driver</h2>
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {staticServices.map((s, i) => (
@@ -740,6 +743,52 @@ Message: ${leadMessage || "None"}
                 <p className="text-muted-foreground">{s.desc}</p>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ===== CORE SEO SERVICES GRID ===== */}
+      <section className="py-20 bg-primary border-t border-zinc-900">
+        <div className="max-w-7xl mx-auto px-6 md:px-12">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="card-dark p-8 flex flex-col justify-between hover:border-zinc-700 transition-colors duration-300">
+              <div>
+                <span className="text-[#FFD700] text-sm uppercase tracking-widest mb-3 block">Airport Transfers</span>
+                <h2 className="text-2xl font-bold text-white mb-4">Mumbai Airport Pickup and Drop Cab</h2>
+                <p className="text-zinc-400 text-sm leading-relaxed mb-6">
+                  Pre-book reliable airport cab service in Mumbai for domestic and international terminals (T1 & T2). Enjoy on-time airport pickups and drops with real-time flight tracking and professional luggage assistance.
+                </p>
+              </div>
+              <Link to="/airport-cab-mumbai" className="text-[#FFD700] hover:text-white transition-colors text-sm font-semibold flex items-center gap-2">
+                Learn More <ChevronRight size={16} />
+              </Link>
+            </motion.div>
+
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="card-dark p-8 flex flex-col justify-between hover:border-zinc-700 transition-colors duration-300">
+              <div>
+                <span className="text-[#FFD700] text-sm uppercase tracking-widest mb-3 block">Intercity Travel</span>
+                <h2 className="text-2xl font-bold text-white mb-4">Outstation Cab from Mumbai</h2>
+                <p className="text-zinc-400 text-sm leading-relaxed mb-6">
+                  Book comfortable one-way and round-trip outstation taxi service from Mumbai to Pune, Nashik, Shirdi, Lonavala, Alibaug, and Mahabaleshwar. Experienced highway chauffeurs ensure safe highway travel.
+                </p>
+              </div>
+              <Link to="/outstation-cab-mumbai" className="text-[#FFD700] hover:text-white transition-colors text-sm font-semibold flex items-center gap-2">
+                Learn More <ChevronRight size={16} />
+              </Link>
+            </motion.div>
+
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="card-dark p-8 flex flex-col justify-between hover:border-zinc-700 transition-colors duration-300">
+              <div>
+                <span className="text-[#FFD700] text-sm uppercase tracking-widest mb-3 block">Corporate Travel</span>
+                <h2 className="text-2xl font-bold text-white mb-4">Corporate Cab Service in Mumbai</h2>
+                <p className="text-zinc-400 text-sm leading-relaxed mb-6">
+                  Custom transport solutions for businesses in Mumbai, featuring monthly billing, dedicated corporate accounts, employee daily commute programs, and luxury executive chauffeur services.
+                </p>
+              </div>
+              <Link to="/corporate-cab-service" className="text-[#FFD700] hover:text-white transition-colors text-sm font-semibold flex items-center gap-2">
+                Learn More <ChevronRight size={16} />
+              </Link>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -933,8 +982,8 @@ Message: ${leadMessage || "None"}
         <div className="absolute inset-0 bg-white opacity-5" />
         <div className="max-w-4xl mx-auto px-6 md:px-12 text-center relative z-10">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">Ready to Experience Premium Travel?</h2>
-            <p className="text-zinc-400 text-lg mb-8 max-w-2xl mx-auto">Book your ride now and enjoy the comfort, safety, and reliability of Carvio Cabs.</p>
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">Book Your Cab in Mumbai Today</h2>
+            <p className="text-zinc-400 text-lg mb-8 max-w-2xl mx-auto">Book safe, clean, and reliable cabs and car rentals with professional driver in Mumbai with Carvio Cab.</p>
             <Link to="/book">
               <Button className="bg-white text-black hover:bg-zinc-200 font-semibold px-10 py-6 text-lg" data-testid="cta-book-btn">
                 Book Your Ride Now

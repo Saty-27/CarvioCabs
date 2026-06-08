@@ -39,6 +39,7 @@ import AboutPage from "@/pages/AboutPage";
 import ServicesPage from "@/pages/ServicesPage";
 import ContactPage from "@/pages/ContactPage";
 import LocationPage from "@/pages/LocationPage";
+import SeoServicePage from "@/pages/SeoServicePage";
 import AuthCallback from "@/pages/AuthCallback";
 import DynamicPage from "@/pages/DynamicPage";
 import AdminPages from "@/pages/admin/AdminPages";
@@ -200,6 +201,35 @@ const AppRouter = () => {
         <Route path="/taxi-service-in-churchgate" element={<LocationPage location="churchgate" />} />
         <Route path="/cab-service-in-matunga" element={<LocationPage location="matunga" />} />
         <Route path="/airport-taxi-service-mumbai" element={<LocationPage location="mumbai-airport" />} />
+        <Route path="/cab-service-in-juhu" element={<LocationPage location="juhu" />} />
+        <Route path="/cab-service-in-malad" element={<LocationPage location="malad" />} />
+        <Route path="/cab-service-in-borivali" element={<LocationPage location="borivali" />} />
+        <Route path="/cab-service-in-kandivali" element={<LocationPage location="kandivali" />} />
+        <Route path="/cab-service-in-powai" element={<LocationPage location="powai" />} />
+        <Route path="/cab-service-in-bkc" element={<LocationPage location="bkc" />} />
+        <Route path="/cab-service-in-lower-parel" element={<LocationPage location="lower-parel" />} />
+        <Route path="/cab-service-in-worli" element={<LocationPage location="worli" />} />
+        <Route path="/cab-service-in-colaba" element={<LocationPage location="colaba" />} />
+        <Route path="/cab-service-in-chembur" element={<LocationPage location="chembur" />} />
+        <Route path="/cab-service-in-ghatkopar" element={<LocationPage location="ghatkopar" />} />
+        <Route path="/cab-service-in-thane" element={<LocationPage location="thane" />} />
+        <Route path="/cab-service-in-navi-mumbai" element={<LocationPage location="navi-mumbai" />} />
+        <Route path="/cab-service-in-vashi" element={<LocationPage location="vashi" />} />
+        <Route path="/cab-service-in-nerul" element={<LocationPage location="nerul" />} />
+        <Route path="/cab-service-in-kharghar" element={<LocationPage location="kharghar" />} />
+        <Route path="/cab-service-in-airoli" element={<LocationPage location="airoli" />} />
+        <Route path="/cab-service-in-mira-road" element={<LocationPage location="mira-road" />} />
+
+        {/* Core SEO Service Routes */}
+        <Route path="/car-rental-mumbai" element={<SeoServicePage pageKey="car-rental-mumbai" />} />
+        <Route path="/airport-cab-mumbai" element={<SeoServicePage pageKey="airport-cab-mumbai" />} />
+        <Route path="/outstation-cab-mumbai" element={<SeoServicePage pageKey="outstation-cab-mumbai" />} />
+        <Route path="/local-cab-mumbai" element={<SeoServicePage pageKey="local-cab-mumbai" />} />
+        <Route path="/corporate-cab-service" element={<SeoServicePage pageKey="corporate-cab-service" />} />
+        <Route path="/mumbai-to-pune-cab" element={<SeoServicePage pageKey="mumbai-to-pune-cab" />} />
+        <Route path="/mumbai-to-nashik-cab" element={<SeoServicePage pageKey="mumbai-to-nashik-cab" />} />
+        <Route path="/mumbai-to-shirdi-cab" element={<SeoServicePage pageKey="mumbai-to-shirdi-cab" />} />
+
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
       {!isAdmin && <FloatingContactButtons />}

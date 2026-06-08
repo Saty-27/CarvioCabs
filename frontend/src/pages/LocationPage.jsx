@@ -227,6 +227,349 @@ const LOCATION_DATA = {
       { q: "How do I meet my driver at the airport?", a: "Upon flight arrival, your chauffeur will coordinate via call or WhatsApp. They can meet you at the designated terminal arrivals exit with a placard of your name." },
       { q: "What happens if my flight is delayed?", a: "We monitor all commercial flights landing in Mumbai. Your driver will automatically adjust the arrival time based on the updated schedule." }
     ]
+  },
+  juhu: {
+    name: "Juhu",
+    metaTitle: "Cab Service in Juhu | Airport Taxi & Car Rental | Carvio Cab",
+    metaDescription: "Book reliable cab service in Juhu with Carvio Cab. Chauffeur driven car rental, airport pickup/drop, outstation taxi and corporate travel in Juhu Mumbai.",
+    keywords: "cab service in Juhu, Juhu taxi booking, Juhu airport cab, car rental Juhu",
+    h1: "Cab Service in Juhu",
+    intro: "Need a premium cab in Juhu? Carvio Cabs provides top-tier chauffeur-driven car rentals and taxi services in Juhu, Juhu Scheme, and surrounding areas. Get safe, clean, and punctual transit for local travel or airport drops.",
+    airportContent: "Book a quick and comfortable airport taxi from Juhu to Mumbai Airport terminal 1 or 2. We monitor flight timings to ensure your chauffeur is waiting for you on time.",
+    routes: [
+      { route: "Juhu to Mumbai Airport Cab", dist: "6 km", time: "18 mins" },
+      { route: "Juhu to Bandra West Cab", dist: "5 km", time: "15 mins" },
+      { route: "Juhu to Dadar Taxi", dist: "13 km", time: "30 mins" },
+      { route: "Juhu to Andheri West Cab", dist: "4 km", time: "12 mins" }
+    ],
+    faqs: [
+      { q: "Do you operate near Juhu Beach and residential areas?", a: "Yes, we provide 24/7 cab pickups near Juhu Beach, Juhu Tara Road, Juhu Scheme, and surrounding neighborhoods." },
+      { q: "Can I book a premium car for local sightseeing in Juhu?", a: "Yes, our local hourly rental packages (such as 8h/80km) are perfect for sightseeing tours and luxury travel." }
+    ]
+  },
+  malad: {
+    name: "Malad",
+    metaTitle: "Cab Service in Malad | Local Taxi & Car Rental Mumbai",
+    metaDescription: "Book cab service in Malad East and Malad West with Carvio Cab. Reliable airport transfers, outstation cabs, and local car rental with driver.",
+    keywords: "cab service in Malad, Malad taxi booking, Malad airport cab, car rental Malad",
+    h1: "Cab Service in Malad",
+    intro: "Looking for a reliable cab in Malad? Carvio Cabs provides premium chauffeur-driven taxi bookings and car rental service across Malad West, Malad East, Link Road, and Mindspace corporate hub. Travel safely with our verified drivers.",
+    airportContent: "Book an airport transfer from Malad to Mumbai Airport. We ensure early morning pickups and smooth highway transit via the Western Express Highway.",
+    routes: [
+      { route: "Malad to Mumbai Airport Cab", dist: "14 km", time: "30 mins" },
+      { route: "Malad to Bandra Kurla Complex (BKC)", dist: "20 km", time: "45 mins" },
+      { route: "Malad to Dadar Taxi", dist: "22 km", time: "50 mins" },
+      { route: "Malad to Pune Outstation Cab", dist: "165 km", time: "4 hrs" }
+    ],
+    faqs: [
+      { q: "Do you service corporate offices in Mindspace Malad?", a: "Yes, we offer dedicated employee transport and executive travel support for firms located in Mindspace, Malad West." },
+      { q: "Are outstation bookings from Malad available one-way?", a: "Yes, we offer affordable one-way outstation taxi drops from Malad to destinations like Pune, Nashik, and Surat." }
+    ]
+  },
+  borivali: {
+    name: "Borivali",
+    metaTitle: "Cab Service in Borivali | Airport taxi & Chauffeur Cars",
+    metaDescription: "Book reliable cab service in Borivali East & West. Get airport cab pickup/drop, outstation taxi, local car rental with driver from Borivali.",
+    keywords: "cab service in Borivali, Borivali taxi booking, Borivali airport cab, car rental Borivali",
+    h1: "Cab Service in Borivali",
+    intro: "Carvio Cabs provides top-rated cab booking and chauffeur-driven car rental in Borivali West, Borivali East, Shimpoli, and neighboring areas. Connect seamlessly to the airport, local meetings, or long-distance outstation routes.",
+    airportContent: "Travel comfortably from Borivali to Mumbai Airport. Our experienced chauffeurs use the Western Express Highway to get you to your flight on time.",
+    routes: [
+      { route: "Borivali to Mumbai Airport Cab", dist: "18 km", time: "40 mins" },
+      { route: "Borivali to Bandra Kurla Complex (BKC)", dist: "24 km", time: "50 mins" },
+      { route: "Borivali to Dadar Taxi", dist: "28 km", time: "60 mins" },
+      { route: "Borivali to Pune Outstation Cab", dist: "172 km", time: "4 hrs" }
+    ],
+    faqs: [
+      { q: "Do you pick up near Borivali Railway Station?", a: "Yes, we coordinate pickup points close to Borivali East and West station exits for convenient railway transit connections." },
+      { q: "Is 24/7 airport transfer service available in Borivali?", a: "Yes, we operate 24/7 for all pre-booked airport pickups and drops from Borivali." }
+    ]
+  },
+  kandivali: {
+    name: "Kandivali",
+    metaTitle: "Cab Service in Kandivali | Car Rental with Driver | Taxi",
+    metaDescription: "Book taxi service in Kandivali East and West with Carvio Cab. Chauffeur driven cars, airport cab transfers, and outstation rides.",
+    keywords: "cab service in Kandivali, Kandivali taxi, car rental Kandivali, airport taxi Kandivali",
+    h1: "Cab Service in Kandivali",
+    intro: "Need a premium cab in Kandivali? Carvio Cabs offers safe and sanitized car rental with driver across Kandivali East (including Lokhandwala, Thakur Village) and Kandivali West. Travel in luxury with our experienced local drivers.",
+    airportContent: "Get on-time airport pickup or drop cab service from Kandivali to Mumbai Airport. We track your flight and guarantee a hassle-free transfer.",
+    routes: [
+      { route: "Kandivali to Mumbai Airport Cab", dist: "16 km", time: "35 mins" },
+      { route: "Kandivali to Bandra Kurla Complex (BKC)", dist: "22 km", time: "48 mins" },
+      { route: "Kandivali to Dadar Taxi", dist: "25 km", time: "55 mins" },
+      { route: "Kandivali to Lonavala Outstation Cab", dist: "110 km", time: "2.8 hrs" }
+    ],
+    faqs: [
+      { q: "Can I book a local hourly cab package in Kandivali?", a: "Yes, we provide flexible hourly packages like 4h/40km and 8h/80km for local city travel in Kandivali." },
+      { q: "Are your drivers background-verified?", a: "Absolutely. All drivers undergo rigorous verification and background checks for passenger safety." }
+    ]
+  },
+  powai: {
+    name: "Powai",
+    metaTitle: "Cab Service in Powai | Corporate Taxi & Airport Cabs",
+    metaDescription: "Premium cab service in Powai with Carvio Cab. Get executive corporate transport, airport pickups, and local car rentals in Hiranandani Powai.",
+    keywords: "cab service in Powai, Powai taxi booking, Hiranandani Powai cab, car rental Powai",
+    h1: "Cab Service in Powai",
+    intro: "Experience elite travel in Powai. Carvio Cabs provides premium chauffeur-driven car rentals and corporate taxi services in Hiranandani Powai, Chandivali, and adjacent hubs. Punctual, safe, and professional transfers.",
+    airportContent: "Book a professional airport cab from Powai to Mumbai Airport. We monitor flight schedules and use JVLR for the fastest route.",
+    routes: [
+      { route: "Powai to Mumbai Airport Cab", dist: "8 km", time: "20 mins" },
+      { route: "Powai to Bandra Kurla Complex (BKC)", dist: "11 km", time: "25 mins" },
+      { route: "Powai to Dadar Taxi", dist: "15 km", time: "35 mins" },
+      { route: "Powai to Pune Outstation Cab", dist: "148 km", time: "3 hrs" }
+    ],
+    faqs: [
+      { q: "Do you specialize in corporate travel in Powai?", a: "Yes, we are a preferred partner for corporate travel in Powai, offering executive booking accounts and consolidated monthly invoicing." },
+      { q: "Do you support digital payments for local trips?", a: "Yes, all our bookings support secure online card, corporate account, and UPI payments via Razorpay." }
+    ]
+  },
+  bkc: {
+    name: "BKC",
+    metaTitle: "Cab Service in BKC | Corporate Car Rental Bandra Kurla Complex",
+    metaDescription: "Premium corporate cab service in BKC Mumbai. Executive chauffeur driven cars, airport transfers, and business travel with Carvio Cab.",
+    keywords: "cab service in BKC, Bandra Kurla Complex taxi, corporate car rental BKC, airport cab BKC",
+    h1: "Cab Service in Bandra Kurla Complex (BKC)",
+    intro: "Travel with style in Mumbai's leading business district. Carvio Cabs provides premium corporate cab services, executive airport transfers, and hourly rentals in Bandra Kurla Complex (BKC). High-end sedans and SUVs with professional chauffeurs.",
+    airportContent: "On-time executive airport transfers from BKC to Mumbai domestic and international terminals. We guarantee seamless pickup and drop logistics.",
+    routes: [
+      { route: "BKC to Mumbai Airport Cab", dist: "8 km", time: "20 mins" },
+      { route: "BKC to South Mumbai (Colaba) Taxi", dist: "20 km", time: "35 mins" },
+      { route: "BKC to Dadar Cab", dist: "6 km", time: "15 mins" },
+      { route: "BKC to Pune Corporate Cab", dist: "140 km", time: "3 hrs" }
+    ],
+    faqs: [
+      { q: "Can I open a corporate travel account in BKC?", a: "Yes, we offer corporate accounts featuring consolidated monthly invoicing, priority dispatch, and customizable travel portals for BKC firms." },
+      { q: "Do you offer premium cars like Mercedes or Fortuner in BKC?", a: "Yes, we maintain a fleet of premium and luxury sedans and SUVs for VIP guest transit in BKC." }
+    ]
+  },
+  "lower-parel": {
+    name: "Lower Parel",
+    metaTitle: "Cab Service in Lower Parel | Local Taxi & Corporate Cars",
+    metaDescription: "Reliable cab booking in Lower Parel with Carvio Cab. Chauffeur driven car rental, airport taxi, and corporate transport in Lower Parel Mumbai.",
+    keywords: "cab service in Lower Parel, Lower Parel taxi, car rental Lower Parel, airport cab Lower Parel",
+    h1: "Cab Service in Lower Parel",
+    intro: "Book premium cab service in Lower Parel, Palladium, Kamala Mills, and surrounding commercial neighborhoods. Carvio Cabs offers clean cars and polite chauffeurs for business travel, client drops, or local shopping commutes.",
+    airportContent: "Arrive stress-free for your flight. Book a professional airport transfer cab from Lower Parel to Mumbai Airport via the Western Express Highway or Coastal Road.",
+    routes: [
+      { route: "Lower Parel to Mumbai Airport Cab", dist: "16 km", time: "35 mins" },
+      { route: "Lower Parel to BKC Business Cab", dist: "11 km", time: "25 mins" },
+      { route: "Lower Parel to Dadar Taxi", dist: "4 km", time: "12 mins" },
+      { route: "Lower Parel to Pune Outstation Cab", dist: "154 km", time: "3.5 hrs" }
+    ],
+    faqs: [
+      { q: "Do you operate in Kamala Mills and Palladium zones?", a: "Yes, we provide 24/7 pickup and drop coverage near all commercial buildings, IT parks, and malls in Lower Parel." },
+      { q: "Are hourly local rentals available from Lower Parel?", a: "Yes, our flexible hourly packages (4h/40km, 8h/80km) are perfect for shopping tours and business visits." }
+    ]
+  },
+  worli: {
+    name: "Worli",
+    metaTitle: "Cab Service in Worli | Airport Taxi & Car Rental Worli",
+    metaDescription: "Book premium taxi service in Worli with Carvio Cab. Chauffeur driven cars, airport pickup/drop, and outstation cabs near Worli Sea Face.",
+    keywords: "cab service in Worli, Worli taxi booking, Worli Sea Face cab, car rental Worli",
+    h1: "Cab Service in Worli",
+    intro: "Travel comfortably across Worli. Carvio Cabs provides top-tier taxi service, local car rentals, and outstation rides from Worli Sea Face, Worli Naka, and neighboring South Mumbai areas. AC vehicles with polite drivers.",
+    airportContent: "Get on-time airport drops and pickups. We navigate the Bandra-Worli Sea Link to get you to Mumbai Airport terminals quickly and comfortably.",
+    routes: [
+      { route: "Worli to Mumbai Airport Cab", dist: "15 km", time: "30 mins" },
+      { route: "Worli to Bandra Kurla Complex (BKC)", dist: "10 km", time: "22 mins" },
+      { route: "Worli to Nariman Point Taxi", dist: "12 km", time: "25 mins" },
+      { route: "Worli to Pune Outstation Cab", dist: "152 km", time: "3.5 hrs" }
+    ],
+    faqs: [
+      { q: "Do you use the Bandra-Worli Sea Link?", a: "Yes, our drivers default to the Sea Link for airport routes to save time, unless you request an alternate route." },
+      { q: "Can I book a cab for a full day in South Mumbai from Worli?", a: "Yes, our 8-hour and 12-hour local rental packages are ideal for full-day city travel." }
+    ]
+  },
+  colaba: {
+    name: "Colaba",
+    metaTitle: "Cab Service in Colaba | South Mumbai Taxi & Car Rental",
+    metaDescription: "Book cab service in Colaba Nariman Point, and South Mumbai with Carvio Cab. Chauffeur driven car rental, airport taxi, and outstation cabs.",
+    keywords: "cab service in Colaba, Colaba taxi booking, South Mumbai cab, car rental Colaba",
+    h1: "Cab Service in Colaba",
+    intro: "Travel South Mumbai with Carvio Cabs. We offer premium chauffeur-driven cab booking, outstation taxi service, and hourly car rentals in Colaba, Gateway of India, and Nariman Point. Comfortable cars with verified local route drivers.",
+    airportContent: "Book a direct airport transfer from Colaba to Mumbai Airport. We utilize the Eastern Freeway or Coastal Road for the fastest transit.",
+    routes: [
+      { route: "Colaba to Mumbai Airport Cab", dist: "26 km", time: "50 mins" },
+      { route: "Colaba to Bandra Kurla Complex (BKC)", dist: "21 km", time: "40 mins" },
+      { route: "Colaba to Dadar Taxi", dist: "13 km", time: "30 mins" },
+      { route: "Colaba to Pune Outstation Cab", dist: "162 km", time: "3.8 hrs" }
+    ],
+    faqs: [
+      { q: "Do you provide tourist car rentals from Colaba?", a: "Yes, we offer local car rentals for Mumbai sightseeing tours covering Gateway of India, Marine Drive, and historic locations." },
+      { q: "Can I pre-book an early morning airport drop from Colaba?", a: "Yes, we suggest booking by the previous night to guarantee a punctual morning pickup from South Mumbai." }
+    ]
+  },
+  chembur: {
+    name: "Chembur",
+    metaTitle: "Cab Service in Chembur | Local Taxi & Airport Cabs",
+    metaDescription: "Book reliable cab service in Chembur with Carvio Cab. Local hourly rentals, outstation taxi, and airport pickup/drop in Chembur East & West.",
+    keywords: "cab service in Chembur, Chembur taxi, car rental Chembur, airport taxi Chembur",
+    h1: "Cab Service in Chembur",
+    intro: "Looking for a cab in Chembur? Carvio Cabs provides premium chauffeur-driven cars and taxi service across Chembur East, Chembur West, and neighboring Eastern Line locations. Experience safe, clean, and punctual travel.",
+    airportContent: "Get on-time airport transfers from Chembur to Mumbai Airport. We utilize Santacruz-Chembur Link Road (SCLR) for the fastest route.",
+    routes: [
+      { route: "Chembur to Mumbai Airport Cab", dist: "12 km", time: "25 mins" },
+      { route: "Chembur to Bandra Kurla Complex (BKC)", dist: "8 km", time: "18 mins" },
+      { route: "Chembur to Dadar Taxi", dist: "10 km", time: "20 mins" },
+      { route: "Chembur to Pune Outstation Cab", dist: "135 km", time: "2.8 hrs" }
+    ],
+    faqs: [
+      { q: "Which route do you use for airport drops from Chembur?", a: "We generally use SCLR or Eastern Express Highway based on real-time traffic conditions." },
+      { q: "Do you offer one-way outstation cabs from Chembur to Pune?", a: "Yes, we offer fixed-rate one-way outstation drop packages to Pune and other locations." }
+    ]
+  },
+  ghatkopar: {
+    name: "Ghatkopar",
+    metaTitle: "Cab Service in Ghatkopar | Airport Taxi & Car Rental",
+    metaDescription: "Book cab service in Ghatkopar East and West with Carvio Cab. Reliable local taxi, airport pickup/drop, and outstation taxi service.",
+    keywords: "cab service in Ghatkopar, Ghatkopar taxi booking, car rental Ghatkopar, airport cab Ghatkopar",
+    h1: "Cab Service in Ghatkopar",
+    intro: "Need a premium cab in Ghatkopar? Carvio Cabs offers professional chauffeur-driven car rentals across Ghatkopar East, Ghatkopar West, LBS Marg, and Metro station zones. AC sedans and executive SUVs for all your travel needs.",
+    airportContent: "Pre-book your airport taxi from Ghatkopar to Mumbai Airport. We ensure early morning pickups and comfortable terminal drops.",
+    routes: [
+      { route: "Ghatkopar to Mumbai Airport Cab", dist: "10 km", time: "22 mins" },
+      { route: "Ghatkopar to Bandra Kurla Complex (BKC)", dist: "9 km", time: "20 mins" },
+      { route: "Ghatkopar to Dadar Taxi", dist: "12 km", time: "25 mins" },
+      { route: "Ghatkopar to Nashik Outstation Cab", dist: "155 km", time: "3.5 hrs" }
+    ],
+    faqs: [
+      { q: "Do you pick up from Ghatkopar Metro Station?", a: "Yes, we coordinate pick-ups near Ghatkopar Metro and Railway station exits for easy commuter transfers." },
+      { q: "Can I book a local taxi package for shopping in Ghatkopar?", a: "Yes, our local hourly rental packages are ideal for shopping trips to local markets or malls." }
+    ]
+  },
+  thane: {
+    name: "Thane",
+    metaTitle: "Cab Service in Thane | Local Car Rental & Outstation Taxi",
+    metaDescription: "Book reliable cab service in Thane with Carvio Cab. Get airport pickup/drop, local hourly rental, and outstation taxi from Thane.",
+    keywords: "cab service in Thane, Thane taxi booking, car rental Thane, airport cab Thane",
+    h1: "Cab Service in Thane",
+    intro: "Experience premium travel in Thane. Carvio Cabs offers professional chauffeur-driven taxi service and hourly car rentals across Thane East, Thane West, Ghodbunder Road, and neighboring areas. AC sedans and SUVs with verified drivers.",
+    airportContent: "Book your airport taxi from Thane to Mumbai Airport. We monitor flight arrivals and ensure on-time pickups and drops.",
+    routes: [
+      { route: "Thane to Mumbai Airport Cab", dist: "22 km", time: "45 mins" },
+      { route: "Thane to Bandra Kurla Complex (BKC)", dist: "25 km", time: "50 mins" },
+      { route: "Thane to Dadar Taxi", dist: "26 km", time: "50 mins" },
+      { route: "Thane to Pune Outstation Cab", dist: "160 km", time: "3.5 hrs" },
+      { route: "Thane to Nashik Cab", dist: "145 km", time: "3.2 hrs" }
+    ],
+    faqs: [
+      { q: "Do you serve Ghodbunder Road in Thane?", a: "Yes, we provide 24/7 pickup and drop coverage across all residential complexes and IT parks on Ghodbunder Road." },
+      { q: "Are tolls included in outstation rates from Thane?", a: "Standard rates exclude toll and parking fees, which are billed transparently at actuals." }
+    ]
+  },
+  "navi-mumbai": {
+    name: "Navi Mumbai",
+    metaTitle: "Cab Service in Navi Mumbai | Local Taxi & Car Rental",
+    metaDescription: "Book cab service in Navi Mumbai with Carvio Cab. Premium airport transfers, corporate travel, outstation taxi and car rental with driver.",
+    keywords: "cab service in Navi Mumbai, Navi Mumbai taxi, car rental Navi Mumbai, airport taxi Navi Mumbai",
+    h1: "Cab Service in Navi Mumbai",
+    intro: "Looking for a reliable cab in Navi Mumbai? Carvio Cabs provides professional chauffeur-driven car rentals across Vashi, Nerul, Belapur, Kharghar, and other Navi Mumbai nodes. Clean AC cars and polite drivers.",
+    airportContent: "Get on-time airport taxi service from Navi Mumbai to Mumbai Airport. We use the Palm Beach Road and Highway for smooth travel.",
+    routes: [
+      { route: "Navi Mumbai to Mumbai Airport Cab", dist: "28 km", time: "55 mins" },
+      { route: "Navi Mumbai to BKC Business Cab", dist: "22 km", time: "45 mins" },
+      { route: "Navi Mumbai to Dadar Taxi", dist: "24 km", time: "45 mins" },
+      { route: "Navi Mumbai to Pune Outstation Cab", dist: "120 km", time: "2.5 hrs" }
+    ],
+    faqs: [
+      { q: "Which areas do you cover in Navi Mumbai?", a: "We cover all major nodes including Vashi, Nerul, Kharghar, Belapur, Kopar Khairane, Sanpada, and Airoli." },
+      { q: "Do you offer one-way drops to Pune from Navi Mumbai?", a: "Yes, we offer fixed-rate one-way outstation taxi service to Pune via the Expressway." }
+    ]
+  },
+  vashi: {
+    name: "Vashi",
+    metaTitle: "Cab Service in Vashi | Airport Taxi & Car Rental Vashi",
+    metaDescription: "Book cab service in Vashi with Carvio Cab. Reliable local taxi, airport pickup/drop, and outstation taxi service with professional driver.",
+    keywords: "cab service in Vashi, Vashi taxi booking, car rental Vashi, airport cab Vashi",
+    h1: "Cab Service in Vashi",
+    intro: "Need a premium cab in Vashi? Carvio Cabs provides top-tier chauffeur-driven car rentals and local taxi services across Vashi, Sanpada, and adjacent Navi Mumbai areas. Verified drivers and clean AC fleet.",
+    airportContent: "Book a direct airport transfer from Vashi to Mumbai Airport. Enjoy punctual pickups and drops with flat-rate fares.",
+    routes: [
+      { route: "Vashi to Mumbai Airport Cab", dist: "24 km", time: "45 mins" },
+      { route: "Vashi to Bandra Kurla Complex (BKC)", dist: "18 km", time: "35 mins" },
+      { route: "Vashi to Dadar Taxi", dist: "16 km", time: "30 mins" },
+      { route: "Vashi to Pune Outstation Cab", dist: "128 km", time: "2.6 hrs" }
+    ],
+    faqs: [
+      { q: "Do you pick up near Vashi Railway Station?", a: "Yes, we coordinate pick-ups near the station and corporate parks in Vashi Sector 30." },
+      { q: "Can I book a local hourly cab package in Vashi?", a: "Yes, we offer flexible local packages (4h/40km and 8h/80km) for city travel." }
+    ]
+  },
+  nerul: {
+    name: "Nerul",
+    metaTitle: "Cab Service in Nerul | Local Taxi & Car Rental Nerul",
+    metaDescription: "Reliable cab service in Nerul Navi Mumbai with Carvio Cab. Chauffeur driven car rental, airport transfers, and outstation taxi booking.",
+    keywords: "cab service in Nerul, Nerul taxi booking, car rental Nerul, airport taxi Nerul",
+    h1: "Cab Service in Nerul",
+    intro: "Looking for a reliable cab in Nerul? Carvio Cabs offers safe and sanitized car rental with driver across Nerul, Seawoods, and surrounding nodes. AC sedans and SUVs with professional drivers.",
+    airportContent: "Get on-time airport pickup or drop cab service from Nerul to Mumbai Airport. We track your flight and guarantee a hassle-free transfer.",
+    routes: [
+      { route: "Nerul to Mumbai Airport Cab", dist: "30 km", time: "60 mins" },
+      { route: "Nerul to Bandra Kurla Complex (BKC)", dist: "24 km", time: "50 mins" },
+      { route: "Nerul to Dadar Taxi", dist: "22 km", time: "45 mins" },
+      { route: "Nerul to Pune Outstation Cab", dist: "115 km", time: "2.3 hrs" }
+    ],
+    faqs: [
+      { q: "Do you service Seawoods Darave area near Nerul?", a: "Yes, we provide 24/7 pickup and drop coverage across Seawoods and Nerul sectors." },
+      { q: "Can I book a cab for a round trip to Pune from Nerul?", a: "Yes, we offer fixed-rate round-trip outstation packages to Pune and other locations." }
+    ]
+  },
+  kharghar: {
+    name: "Kharghar",
+    metaTitle: "Cab Service in Kharghar | Airport Taxi & Car Rental",
+    metaDescription: "Book cab service in Kharghar Navi Mumbai with Carvio Cab. Reliable local taxi, airport pickup/drop, and outstation taxi service.",
+    keywords: "cab service in Kharghar, Kharghar taxi, car rental Kharghar, airport cab Kharghar",
+    h1: "Cab Service in Kharghar",
+    intro: "Need a premium cab in Kharghar? Carvio Cabs provides top-tier chauffeur-driven car rentals and local taxi services across Kharghar, Belapur, and adjacent nodes. Clean AC cars and verified drivers.",
+    airportContent: "Book your airport taxi from Kharghar to Mumbai Airport. We monitor flight arrivals and ensure on-time pickups and drops.",
+    routes: [
+      { route: "Kharghar to Mumbai Airport Cab", dist: "35 km", time: "70 mins" },
+      { route: "Kharghar to Bandra Kurla Complex (BKC)", dist: "30 km", time: "60 mins" },
+      { route: "Kharghar to Dadar Taxi", dist: "28 km", time: "55 mins" },
+      { route: "Kharghar to Pune Outstation Cab", dist: "105 km", time: "2.1 hrs" }
+    ],
+    faqs: [
+      { q: "Do you operate in Sector 35 and golf course areas in Kharghar?", a: "Yes, we provide 24/7 pickup and drop coverage across all sectors of Kharghar." },
+      { q: "Is toll included in Pune outstation trips from Kharghar?", a: "Standard rates exclude toll and parking fees, which are billed transparently at actuals." }
+    ]
+  },
+  airoli: {
+    name: "Airoli",
+    metaTitle: "Cab Service in Airoli | Local Taxi & Corporate Cars",
+    metaDescription: "Book cab service in Airoli Navi Mumbai with Carvio Cab. Chauffeur driven car rental, airport taxi, and corporate transport in Airoli.",
+    keywords: "cab service in Airoli, Airoli taxi booking, car rental Airoli, airport taxi Airoli",
+    h1: "Cab Service in Airoli",
+    intro: "Book premium cab service in Airoli, Mindspace, and surrounding commercial neighborhoods. Carvio Cabs offers clean cars and polite chauffeurs for business travel, client drops, or local commutes.",
+    airportContent: "Arrive on time for your flight. Book a professional airport transfer cab from Airoli to Mumbai Airport via SCLR or Eastern Express Highway.",
+    routes: [
+      { route: "Airoli to Mumbai Airport Cab", dist: "26 km", time: "50 mins" },
+      { route: "Airoli to Bandra Kurla Complex (BKC)", dist: "20 km", time: "40 mins" },
+      { route: "Airoli to Dadar Taxi", dist: "22 km", time: "45 mins" },
+      { route: "Airoli to Pune Outstation Cab", dist: "142 km", time: "3 hrs" }
+    ],
+    faqs: [
+      { q: "Do you service corporate parks in Airoli Mindspace?", a: "Yes, we specialize in employee transport and executive travel for companies in Mindspace, Airoli." },
+      { q: "Do you offer hourly local rentals in Airoli?", a: "Yes, our local hourly rental packages (such as 8h/80km) are perfect for business visits." }
+    ]
+  },
+  "mira-road": {
+    name: "Mira Road",
+    metaTitle: "Cab Service in Mira Road | Airport Taxi & Car Rental",
+    metaDescription: "Book cab service in Mira Road East and West with Carvio Cab. Reliable local taxi, airport pickup/drop, and outstation taxi service.",
+    keywords: "cab service in Mira Road, Mira Road taxi, car rental Mira Road, airport cab Mira Road",
+    h1: "Cab Service in Mira Road",
+    intro: "Need a premium cab in Mira Road? Carvio Cabs provides professional chauffeur-driven car rentals across Mira Road East, Bhayandar, and adjacent nodes. Clean AC cars and verified drivers.",
+    airportContent: "Book your airport taxi from Mira Road to Mumbai Airport. We monitor flight arrivals and ensure on-time pickups and drops.",
+    routes: [
+      { route: "Mira Road to Mumbai Airport Cab", dist: "28 km", time: "60 mins" },
+      { route: "Mira Road to Bandra Kurla Complex (BKC)", dist: "32 km", time: "70 mins" },
+      { route: "Mira Road to Dadar Taxi", dist: "34 km", time: "70 mins" },
+      { route: "Mira Road to Pune Outstation Cab", dist: "185 km", time: "4.5 hrs" }
+    ],
+    faqs: [
+      { q: "Do you cover all areas in Mira Road and Bhayandar?", a: "Yes, we provide comprehensive 24/7 pickup and drop coverage across Mira Road East & West and Bhayandar." },
+      { q: "Are tolls included in outstation rates from Mira Road?", a: "Standard rates exclude toll and parking fees, which are billed transparently at actuals." }
+    ]
   }
 };
 

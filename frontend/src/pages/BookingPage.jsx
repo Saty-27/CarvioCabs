@@ -45,9 +45,9 @@ export default function BookingPage() {
   );
   const [pickupTime, setPickupTime] = useState(searchParams.get("time") || "");
   const [returnDate, setReturnDate] = useState(null);
-  const [distanceKm, setDistanceKm] = useState("");
-  const [durationHours, setDurationHours] = useState("");
   const [paymentType, setPaymentType] = useState("full");
+  const [isPickupCalendarOpen, setIsPickupCalendarOpen] = useState(false);
+  const [isReturnCalendarOpen, setIsReturnCalendarOpen] = useState(false);
 
   // Fare state
   const [fare, setFare] = useState(null);
@@ -453,7 +453,7 @@ Booking Status: Confirmed / Paid
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <Label className="text-zinc-400">Pickup Date *</Label>
-                      <Popover>
+                      <Popover open={isPickupCalendarOpen} onOpenChange={setIsPickupCalendarOpen}>
                         <PopoverTrigger asChild>
                           <Button
                             variant="outline"
@@ -470,7 +470,7 @@ Booking Status: Confirmed / Paid
                           <Calendar
                             mode="single"
                             selected={pickupDate}
-                            onSelect={setPickupDate}
+                            onSelect={(date) => { setPickupDate(date); setIsPickupCalendarOpen(false); }}
                             disabled={(date) => date < new Date()}
                             className="bg-[#121212]"
                           />
@@ -498,7 +498,7 @@ Booking Status: Confirmed / Paid
                   {tripType === "round_trip" && (
                     <div>
                       <Label className="text-zinc-400">Return Date</Label>
-                      <Popover>
+                      <Popover open={isReturnCalendarOpen} onOpenChange={setIsReturnCalendarOpen}>
                         <PopoverTrigger asChild>
                           <Button
                             variant="outline"
@@ -514,7 +514,7 @@ Booking Status: Confirmed / Paid
                           <Calendar
                             mode="single"
                             selected={returnDate}
-                            onSelect={setReturnDate}
+                            onSelect={(date) => { setReturnDate(date); setIsReturnCalendarOpen(false); }}
                             disabled={(date) => date < (pickupDate || new Date())}
                             className="bg-[#121212]"
                           />
